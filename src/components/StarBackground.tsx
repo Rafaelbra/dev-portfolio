@@ -25,12 +25,20 @@ export default function StarBackground() {
 
     useEffect(() => {
         generateStars();
-        generateMeteors()
+        generateMeteors();
+
+        const handleResize = () => {
+            generateStars();
+        }
+        window.addEventListener('resize', handleResize);
+
+        return () => window.removeEventListener('resize', handleResize)
+
     }, []);
 
 
     const generateStars = () => {
-        const numberOfStars = Math.floor(window.innerWidth * window.innerHeight / 1000);
+        const numberOfStars = Math.floor(window.innerWidth * window.innerHeight / 3000);
         let newStars: Star[] = [];
 
     for (let i = 0; i < numberOfStars; i++) {
@@ -54,7 +62,7 @@ export default function StarBackground() {
     for (let i = 0; i < numberOfMeteors; i++) {
         newMeteors.push({
             id: i,
-            size: Math.random() * 2 + 1,
+            size: Math.random() + 1,
             x: Math.random() * 100,
             y: Math.random() * 20,
             delay: Math.random() * 0.5 + 0.5,
