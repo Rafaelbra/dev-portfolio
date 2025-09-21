@@ -1,4 +1,5 @@
-import HeroScetion from "../components/HeroSection";
+import AboutSection from "../components/AboutSection";
+import HeroSection from "../components/HeroSection";
 import Navbar from "../components/Navbar";
 import StarBackground from "../components/StarBackground";
 import ThemeToggle from "../components/ThemeToggle";
@@ -14,8 +15,11 @@ export default function Home() {
             <Navbar />
 
             <main>
-                <HeroScetion />
+                <HeroSection />
+                <AboutSection />
             </main>
+
+            
             
         </div>
     )
