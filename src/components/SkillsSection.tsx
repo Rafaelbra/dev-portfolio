@@ -16,19 +16,29 @@ const skills = [
   { name: "Express", level: 60, category: "backend" },
   { name: "MongoDB", level: 60, category: "backend" },
   { name: "PostgreSQL", level: 65, category: "backend" },
+  { name: "Prisma", level: 70, category: "backend" },
   { name: "GraphQL", level: 60, category: "backend" },
 
+// APIs & Integration
+  { name: "REST APIs", level: 85, category: "API's" },
+  { name: "Google Maps API", level: 70, category: "API's" },
+  { name: "AI Integration (Puter.js)", level: 65, category: "API's" },
+
   // Tools
+  { name: "Figma", level: 85, category: "tools" },
   { name: "Git/GitHub", level: 90, category: "tools" },
   { name: "Docker", level: 70, category: "tools" },
-  { name: "Figma", level: 85, category: "tools" },
   { name: "VS Code", level: 95, category: "tools" },
 ];
 
-const categories = ["all", "frontend", "backend", "tools"]
+const categories = ["all", "frontend", "backend", "tools", "API's"]
 
 export default function SkillsSection() {
     const [activeCategory, setActiveCategory] = useState("all");
+
+    const filteredSkills = skills.filter(
+        (skill) => activeCategory === "all" || skill.category === activeCategory
+    );
 
     return (
         <section id="skills" className="py-24 px-4 relative bg-secondary/30">
@@ -54,7 +64,7 @@ export default function SkillsSection() {
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {skills.map((skill, key) => (
+                    {filteredSkills.map((skill, key) => (
                         <div key={key} className="bg-card p-6 rounded-lg shadow-xs card-hover">
                             <div className="text-left mb-4">
                                 <h3 className="font-semibold text-lg">
