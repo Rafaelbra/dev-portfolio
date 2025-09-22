@@ -1,11 +1,11 @@
-import { ExternalLink, Github } from 'lucide-react';
+import { ArrowRight, ExternalLink, Github } from 'lucide-react';
 
 const projects = [
     {
         id: 1,
         title: "AI-resume analyzer",
         description: "Upload resumes, create job listings, and leverage AI to automatically evaluate and match candidates to job requirements.",
-        image: "/public/projects/AI-Resume-Analyzer photo.png",
+        image: "/projects/AI-Resume-Analyzer photo.png",
         tags: ["React", "tailwindCSS", "AI Integration", "React Router", "Puter.js"],
         demoUrl: "puter.com/app/jsm-ai-resume-analyzer-30",
         githubUrl: "https://github.com/Rafaelbra/ai-resume-analyzer"
@@ -14,7 +14,7 @@ const projects = [
         id: 2,
         title: "E-commerce Website",
         description: "An interactive, fully responsive e-commerce web application built with React and Tailwind CSS, integrating API for dynamic product data.",
-        image: "/public/projects/e-commerce website photo.png",
+        image: "/projects/e-commerce website photo.png",
         tags: ["React", "tailwindCSS", "API Integration"],
         demoUrl: "https://ecommerce-project-black-alpha.vercel.app/",
         githubUrl: "https://github.com/Rafaelbra/ecommerce-project"
@@ -23,7 +23,7 @@ const projects = [
         id: 3,
         title: "Movie Website",
         description: "Netflix-style movie browsing platform built with React and Tailwind CSS, integrating the TMDB API for dynamic movie data.",
-        image: "/public/projects/Movie-website photo.png",
+        image: "/projects/Movie-website photo.png",
         tags: ["React", "tailwindCSS", "TMDB API Integration"],
         demoUrl: "https://netflix-project-coral-eight.vercel.app/",
         githubUrl: "https://github.com/Rafaelbra/netflix-project_"
@@ -32,7 +32,7 @@ const projects = [
         id: 4,
         title: "Travel Planner App",
         description: "Full stack travel planner app. Features trip planning, database storage, and an interactive 3D globe to track visited countries.",
-        image: "/public/projects/Travel-planner photo.png",
+        image: "/projects/Travel-planner photo.png",
         tags: ["React", "Next.js", "tailwindCSS", "Google Maps API", "Prisma", "Postgresql"],
         demoUrl: "https://travel-planner-six-brown.vercel.app/",
         githubUrl: "https://github.com/Rafaelbra/travel-planner"
@@ -92,6 +92,12 @@ export default function ProjectsSection() {
                             </div>
                         </div>
                     ))}
+                </div>
+
+                <div className='text-center mt-12'>
+                    <a className='cosmic-button w-fit flex items-center mx-auto gap-2' target='_blank' href='https://github.com/Rafaelbra'>
+                        Checkout My Github <ArrowRight size={16} />
+                    </a>
                 </div>
             </div>
         </section>
