@@ -1,4 +1,4 @@
-import { Mail } from 'lucide-react';
+import { Mail, MapPin, Phone } from 'lucide-react';
 
 
 export default function ContactSection() {
@@ -32,7 +32,46 @@ export default function ContactSection() {
                                     </a>
                                 </div>
                             </div>
+                            <div className="flex items-start space-x-4">
+                                <div className="p-3 rounded-full bg-primary/10">
+                                    <Phone className='h-6 w-6 text-primary' />
+                                </div>
+                                <div>
+                                    <h4 className='font-medium'>
+                                        Phone
+                                    </h4>
+                                    <a href='tel:+18459066372' className='text-muted-foreground hover:text-primary transition-colors'>
+                                        +1 (845) 9066372
+                                    </a>
+                                </div>
+                            </div>
+                            <div className="flex items-start space-x-4">
+                                <div className="p-3 rounded-full bg-primary/10">
+                                    <MapPin className='h-6 w-6 text-primary' />
+                                </div>
+                                <div>
+                                    <h4 className='font-medium'>
+                                        Location
+                                    </h4>
+                                    <a className='text-muted-foreground hover:text-primary transition-colors'>
+                                        Nyack, New York
+                                    </a>
+                                </div>
+                            </div>
                         </div>
+                    </div>
+                    <div className='bg-card p-8 rounded-lg shadow-xs'>
+                        <h3 className='text-2xl font-semibold mb-6'> Send a Message</h3>
+                        <form className='space-y-6'>
+                            <label htmlFor='name'> Your Name</label>
+                            <input 
+                             type='text' 
+                             id='name' name='name' 
+                             required 
+                             className='w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary'
+                             placeholder='Rafael Braga...'
+                            />
+                        </form>
                     </div>
                 </div>
             </div>
