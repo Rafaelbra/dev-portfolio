@@ -1,7 +1,10 @@
-import { Mail, MapPin, Phone } from 'lucide-react';
+import { Mail, MapPin, Phone, Send } from 'lucide-react';
+import { cn } from '../lib/utils';
 
 
 export default function ContactSection() {
+
+
     return (
         <section id="contact" className="py-24 px-4 relative bg-secondary/30">
             <div>
@@ -63,16 +66,43 @@ export default function ContactSection() {
                     <div className='bg-card p-8 rounded-lg shadow-xs'>
                         <h3 className='text-2xl font-semibold mb-6'> Send a Message</h3>
                         <form className='space-y-6'>
-                            <label htmlFor='name'> Your Name</label>
-                            <input 
-                             type='text' 
-                             id='name' name='name' 
-                             required 
-                             className='w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary'
-                             placeholder='Rafael Braga...'
-                            />
+                            <div>
+                                <label htmlFor='name' className='block text-sm font-medium mb-2'> Your Name</label>
+                                <input 
+                                type='text' 
+                                id='name' name='name' 
+                                required 
+                                className='w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary'
+                                placeholder='Rafael Braga...'
+                                />
+                            </div>
+                            <div>
+                                <label htmlFor='email' className='block text-sm font-medium mb-2'> Your Email</label>
+                                <input 
+                                type='email' 
+                                id='email' name='email' 
+                                required 
+                                className='w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary'
+                                placeholder='john@gmail.com'
+                                />
+                            </div>
+                            <div>
+                                <label htmlFor='message' className='block text-sm font-medium mb-2'> Your Message</label>
+                                <textarea 
+                                id='message' name='message' 
+                                required 
+                                className='w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary resize-none'
+                                placeholder="Hello, I'd like to talk about..."
+                                />
+                            </div>
+
+                            <button type='submit' className={cn("cosmic-button w-full flex items-center justify-center gap-2")}>
+                                <Send /> Send Message
+                            </button>
                         </form>
+                        
                     </div>
+                    
                 </div>
             </div>
         </section>
