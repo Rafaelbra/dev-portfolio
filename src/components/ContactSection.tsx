@@ -1,9 +1,21 @@
 import { Mail, MapPin, Phone, Send } from 'lucide-react';
 import { cn } from '../lib/utils';
+import { useToast } from '../hooks/use-toast';
 
 
 export default function ContactSection() {
+    const { toast } = useToast();
 
+        const handleSubmit = (e) => {
+            e.preventDefault()
+
+            setTimeout(() => {
+                toast({
+                    title: "Message sent!",
+                    description: "Thank you for your message. I'll get back to you soon."
+                })
+            }, 1500)
+        }
 
     return (
         <section id="contact" className="py-24 px-4 relative bg-secondary/30">
@@ -63,7 +75,7 @@ export default function ContactSection() {
                             </div>
                         </div>
                     </div>
-                    <div className='bg-card p-8 rounded-lg shadow-xs'>
+                    <div className='bg-card p-8 rounded-lg shadow-xs' onSubmit={handleSubmit}> 
                         <h3 className='text-2xl font-semibold mb-6'> Send a Message</h3>
                         <form className='space-y-6'>
                             <div>
