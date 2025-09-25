@@ -1,21 +1,28 @@
 import { Mail, MapPin, Phone, Send } from 'lucide-react';
 import { cn } from '../lib/utils';
 import { useToast } from '../hooks/use-toast';
+import { useState } from 'react';
 
 
 export default function ContactSection() {
     const { toast } = useToast();
+    const [isSubmitting, setIsSubmitting] = useState(false)
 
         const handleSubmit = (e) => {
-            e.preventDefault()
+            e.preventDefault();
+
+            setIsSubmitting(true);
 
             setTimeout(() => {
                 toast({
                     title: "Message sent!",
                     description: "Thank you for your message. I'll get back to you soon."
-                })
-            }, 1500)
-        }
+                });
+                setIsSubmitting(false);
+            }, 1500);
+
+            
+        };
 
     return (
         <section id="contact" className="py-24 px-4 relative bg-secondary/30">
@@ -108,8 +115,12 @@ export default function ContactSection() {
                                 />
                             </div>
 
-                            <button type='submit' className={cn("cosmic-button w-full flex items-center justify-center gap-2")}>
-                                <Send /> Send Message
+                            <button 
+                             type='submit' 
+                             disabled={isSubmitting}
+                             className={cn("cosmic-button w-full flex items-center justify-center gap-2")}>
+                                {isSubmitting ? "Sending..." : "Send Message"}
+                                <Send /> 
                             </button>
                         </form>
                         
