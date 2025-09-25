@@ -1,4 +1,5 @@
-import { useToast, ToastType } from "/Users/rafaelbraga/Desktop/dev-portfolio/src/hooks/use-toast.ts";
+
+import { ToastType, useToast } from "../../hooks/use-toast";
 import {
   Toast,
   ToastClose,
