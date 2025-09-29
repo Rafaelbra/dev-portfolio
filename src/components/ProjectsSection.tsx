@@ -6,7 +6,7 @@ const projects = [
         title: "Saas Landing Page",
         description: "Responsive AI startup landing page with clean UI/UX. Built with React and tailwindcss for high conversions.",
         image: "/projects/SAAS-website.png",
-        tags: ["React", "tailwindCSS", "Vite"],
+        tags: ["React", "tailwindCSS", "Vite", "Zustand"],
         demoUrl: "https://saas-landing-page-git-main-rafaelbras-projects.vercel.app/",
         githubUrl: "https://github.com/Rafaelbra/SAAS-LandingPage"
     },
@@ -69,8 +69,9 @@ export default function ProjectsSection() {
                          key={key} 
                          className="group bg-card rounded-lg overflow-hidden. shadow-xs card-hover">
                             <div className="h-48 overflow-hidden">
-                                <img src={project.image} alt={project.title} className="w-full h-full object-cover transition-transfor duration-500 group-hover:scale-110" />
-                            </div>
+                                <img src={project.image} alt={project.title}  className="w-full h-full object-cover transition-transfor duration-500 group-hover:scale-110" />
+                                
+                            </div> 
                             <div className="p-6">
                                 <div className="flex flex-wrap gap-2 mb-1">
                                     {project.tags.map((tag) => (
