@@ -3,24 +3,15 @@ import { ArrowRight, ExternalLink, Github } from 'lucide-react';
 const projects = [
     {
         id: 1,
-        title: "AI-resume analyzer",
-        description: "Upload resumes, create job listings, and leverage AI to automatically evaluate and match candidates to job requirements.",
-        image: "/projects/AI-Resume-Analyzer photo.png",
-        tags: ["React", "tailwindCSS", "AI Integration", "React Router", "Puter.js"],
-        demoUrl: "puter.com/app/jsm-ai-resume-analyzer-30",
-        githubUrl: "https://github.com/Rafaelbra/ai-resume-analyzer"
+        title: "Saas Landing Page",
+        description: "Responsive AI startup landing page with clean UI/UX. Built with React and tailwindcss for high conversions.",
+        image: "/projects/SAAS-website.png",
+        tags: ["React", "tailwindCSS", "Vite"],
+        demoUrl: "https://saas-landing-page-git-main-rafaelbras-projects.vercel.app/",
+        githubUrl: "https://github.com/Rafaelbra/SAAS-LandingPage"
     },
     {
         id: 2,
-        title: "E-commerce Website",
-        description: "An interactive, fully responsive e-commerce web application built with React and Tailwind CSS, integrating API for dynamic product data.",
-        image: "/projects/e-commerce website photo.png",
-        tags: ["React", "tailwindCSS", "API Integration"],
-        demoUrl: "https://ecommerce-project-black-alpha.vercel.app/",
-        githubUrl: "https://github.com/Rafaelbra/ecommerce-project"
-    },
-    {
-        id: 3,
         title: "Movie Website",
         description: "Netflix-style movie browsing platform built with React and Tailwind CSS, integrating the TMDB API for dynamic movie data.",
         image: "/projects/Movie-website photo.png",
@@ -29,7 +20,7 @@ const projects = [
         githubUrl: "https://github.com/Rafaelbra/netflix-project_"
     },
     {
-        id: 4,
+        id: 3,
         title: "Travel Planner App",
         description: "Full stack travel planner app. Features trip planning, database storage, and an interactive 3D globe to track visited countries.",
         image: "/projects/Travel-planner photo.png",
@@ -37,6 +28,27 @@ const projects = [
         demoUrl: "https://travel-planner-six-brown.vercel.app/",
         githubUrl: "https://github.com/Rafaelbra/travel-planner"
     },
+    {
+        id: 4,
+        title: "E-commerce Website",
+        description: "An interactive, fully responsive e-commerce web application built with React and Tailwind CSS, integrating API for dynamic product data.",
+        image: "/projects/e-commerce website photo.png",
+        tags: ["React", "tailwindCSS", "API Integration"],
+        demoUrl: "https://ecommerce-project-black-alpha.vercel.app/",
+        githubUrl: "https://github.com/Rafaelbra/ecommerce-project"
+    },
+    {
+        id: 5,
+        title: "AI-resume analyzer",
+        description: "Upload resumes, create job listings, and leverage AI to automatically evaluate and match candidates to job requirements.",
+        image: "/projects/AI-Resume-Analyzer photo.png",
+        tags: ["React", "tailwindCSS", "AI Integration", "React Router", "Puter.js"],
+        demoUrl: "puter.com/app/jsm-ai-resume-analyzer-30",
+        githubUrl: "https://github.com/Rafaelbra/ai-resume-analyzer"
+    },
+    
+    
+    
 ]
 
 export default function ProjectsSection() {
